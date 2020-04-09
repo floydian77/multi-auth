@@ -27,3 +27,5 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/writer', 'Auth\RegisterController@createWriter');
 
 Route::view('/home', 'home')->middleware('auth:admin,writer');
+
+Route::resource('products', 'ProductController');
